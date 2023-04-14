@@ -54,6 +54,9 @@ const navPageFollowers = document.querySelector("#nav-page-followers");
 const navPageRepos = document.querySelector("#nav-page-repos");
 
 const tabContent = document.querySelector("#table-action");
+const divContainer = document.querySelector("#div-container");
+
+
 
 let urlRepos = "";
 let urlFollowers = "";
@@ -143,7 +146,7 @@ const obtenerDatosGithub = async (username = "jdanymc") => {
     });
     return;
   }
-
+  divContainer.classList.remove("blur");
   return data;
 };
 
