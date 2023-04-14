@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <style>
+      a {
+        text-decoration: none;
+      }
+      #img-profile,
+      #github-profile {
+        width: 100%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <section
+      class="container vh-100 d-flex align-items-start justify-content-center"
+    >
+      <div text-start w-75>
+        <h1>GitHub finder</h1>
+        <div class="row">
+          <div class="col-md-10">
+            <input
+              type="text"
+              id="github-search"
+              class="form-control"
+              placeholder="Busca tu Usuario"
+            />
+          </div>
+          <div class="col-md-2">
+            <div class="d-grid gap-2">
+              <button class="btn btn-danger" id="github-action-search">
+                Buscar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 p-2 d-grid gap-2">
+            <div class="card">
+              <img
+                src="https://pbs.twimg.com/media/EmUM83TXIAAss5k.png"
+                alt=""
+                class="rounded-circle card-img-top p-1"
+                id="img-profile"
+              />
+
+              <div class="card-body">
+                <h3 class="card-title" id="github-name">The OctoCat</h3>
+                <h5 class="" id="github-username">OctoCat</h5>
+                <p class="card-text" id="github-bio">bio</p>
+                <a
+                  class="btn btn-primary"
+                  target="_blank"
+                  href="javascript:;"
+                  id="github-profile"
+                  >Profile</a
+                >
+                <p>
+                  <a class="" href="javascript:;" id="link-followers">
+                    <svg
+                      text="muted"
+                      aria-hidden="true"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      version="1.1"
+                      width="16"
+                      data-view-component="true"
+                      class="octicon octicon-people"
+                    >
+                      <path
+                        d="M2 5.5a3.5 3.5 0 1 1 5.898 2.549 5.508 5.508 0 0 1 3.034 4.084.75.75 0 1 1-1.482.235 4 4 0 0 0-7.9 0 .75.75 0 0 1-1.482-.236A5.507 5.507 0 0 1 3.102 8.05 3.493 3.493 0 0 1 2 5.5ZM11 4a3.001 3.001 0 0 1 2.22 5.018 5.01 5.01 0 0 1 2.56 3.012.749.749 0 0 1-.885.954.752.752 0 0 1-.549-.514 3.507 3.507 0 0 0-2.522-2.372.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5.75.75 0 0 1 11 4Zm-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5Z"
+                      ></path>
+                    </svg>
+                    <span id="github-followers" class="">1</span>
+                    followers
+                  </a>
+                  .
+                  <a
+                    class="Link--secondary no-underline no-wrap"
+                    href="javascript:;"
+                    id="link-following"
+                  >
+                    <span class="" id="github-following">3</span>
+                    following
+                  </a>
+                </p>
+                <p>
+                  <svg
+                    class="octicon octicon-organization"
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M1.75 16A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 0 0 .25-.25V8.285a.25.25 0 0 0-.111-.208l-1.055-.703a.749.749 0 1 1 .832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0 1 14.25 16h-3.5a.766.766 0 0 1-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 0 1-.75-.75V14h-1v1.25a.75.75 0 0 1-.75.75Zm-.25-1.75c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25ZM3.75 6h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 3.75A.75.75 0 0 1 3.75 3h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 3.75Zm4 3A.75.75 0 0 1 7.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 7 6.75ZM7.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 9.75A.75.75 0 0 1 3.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 9.75ZM7.75 9h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z"
+                    ></path>
+                  </svg>
+                  <span id="github-inst">UNI</span>
+                </p>
+                <p>
+                  <svg
+                    class="octicon octicon-location"
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"
+                    ></path>
+                  </svg>
+                  <span id="github-location"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 p-2">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="javascript:;" id="nav-page-repos">Repositories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:;" id="nav-page-followers">Followers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:;" id="nav-page-following">Following</a>
+              </li>
+            </ul>
+            <table class="table" id="table-action">
+              <tbody>   
+                <tr><td>aaaaaaaaaaaa</td></tr>            
+                <tr><td>aaaaaaaaaaaa</td></tr>            
+                <tr><td>aaaaaaaaaaaa</td></tr>            
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./reto.js"></script>
+  </body>
+</html>
